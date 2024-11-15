@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>ДА</title>
+    <style type="text/css">
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .div_button {
+        position: absolute;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      #btn {
+        height: 40%;
+        width: 80%;
+        font-size: 400%;
+        color: red;
+        background-color: greenyellow;
+        border-radius: 10px;
+        font-family: ACADEMY ENGRAVED LET;
+        z-index: 100;
+      }
+      #vid {
+        height: auto;
+        width: 100%;
+        display: none;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript><h1>Javascript is not support by your browser</h1></noscript>
+      <div class="div_button">
+        <button id="btn" onclick="playVideo()">ARE YOU SURE?</button>
+      </div>
+      <video id="vid" width="100%" autoplay loop>
+        <source src="./tenor.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+    <script>
+      function playVideo() {
+        const vid = document.getElementById('vid');
+        const btn = document.getElementById('btn');
+        vid.style.display = "block";
+        btn.style.display = "none";
+        vid.play();
+      }
+    </script>
+  </body>
+</html>
